@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    body{
+      transform-style: preserve-3d;
+      perspective: 1000px;
+    }
+    .box{
+      width: 200px;
+      height: 200px;
+      margin:150px auto;
+      box-sizing: border-box;
+      /*border:solid 1px red;*/
+      position:relative;
+      transition: all 5s;
+      transform-style: preserve-3d;
+
+    }
+    .box div{
+      width: 200px;
+      height: 200px;
+      box-sizing: border-box;
+      border:solid red 1px ;
+      position:absolute;
+      top:0;
+      left:0;
+      transform-style: preserve-3d;
+       background-color:tan;
+       opacity: 0.4;
+      font-size:80px;
+      font-weight: 900;
+       text-align: center;
+       line-height: 200px;
+    }
+    .box>div:nth-child(1){
+     
+      transform:translateZ(100px);
+    }
+     .box>div:nth-child(2){
+      transform:rotateY(-180deg) translateZ(100px);
+
+    }
+     .box>div:nth-child(3){
+      transform:rotateY(-90deg) translateZ(100px);
+    }
+    .box>div:nth-child(4){
+      transform:rotateY(90deg) translateZ(100px);
+    }
+    .box>div:nth-child(5){
+      transform:rotateX(90deg) translateZ(100px);
+    }
+    .box>div:nth-child(6){
+      transform:rotateX(-90deg) translateZ(100px);
+    }
+    .box:hover{
+      transform:rotateX(360deg) rotateY(360deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div>前</div>
+    <div>后</div>
+    <div>左</div>
+    <div>右</div>
+    <div>上</div>
+    <div>下</div>
+  </div>
+</body>
+</html>
